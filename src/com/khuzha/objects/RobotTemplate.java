@@ -19,8 +19,12 @@ public class RobotTemplate {
     }
 
     void turnOn () {
-        isTurnedOn = true;
-        System.out.println("Loading... Robot is ready work.");
+        if (!isTurnedOn) {
+            isTurnedOn = true;
+            System.out.println("Loading... Robot is ready to work.");
+        } else {
+            System.out.println("I'm already working!");
+        }
     }
 
     void turnOff () {
